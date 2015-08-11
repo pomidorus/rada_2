@@ -1,0 +1,5 @@
+/*!CK:319646817!*//*1435573723,*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["cHh5G"]); }
+
+__d("ShareNowController",["Dialog","Event","ShareNowCounter","ShareNowCounterEvent","ShareNowConstants"],function(a,b,c,d,e,f,g,h,i,j,k){b.__markCompiled&&b.__markCompiled();var l,m={initMenu:function(n){var o=n.getTriggerElem();h.listen(o,'success',function(event){try{var q=event.data.response.payload;if(q.share_now_succeeded)this.showSuccess(q.message);}catch(p){}}.bind(this));h.listen(o,'error',function(event){try{this.showError(event.data.response.errorDescription);}catch(p){this.showError();}}.bind(this));n.getPopover().subscribe('show',this._logMenuShown);},showSuccess:function(n){this.showDialog(n||k.success);},showError:function(n){this.showDialog(n||k.error);},showDialog:function(n){if(l)l.destroy();l=new g().setBody(n).setAutohide(2500).setModal(true).show();},_logMenuShown:function(){i.logEvent(j.OPEN_SHARE_NOW);}};e.exports=m;},null);
